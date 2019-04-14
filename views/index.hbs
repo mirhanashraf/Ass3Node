@@ -1,0 +1,29 @@
+
+
+<h2>Products</h2>
+
+<table>
+<thead>
+  <tr>
+    {{#each products.[0]}}
+      <th>{{@key}}</th>
+    {{/each}}
+  </tr>
+</thead>
+<tbody>
+  {{#each products}}
+    <tr>
+        <td>{{this.prodId}}</td>
+        <td>{{this.prodName}}</td >
+        <td>{{this.price}}</td >
+        <td>{{this.category}}</td >
+        <td><button onclick="window.location.href=`/user/{{this.prodId}}`">Edit</button><button onclick="window.location.href=`/delete/{{this.prodId}}`">Delete</button></td>
+    </tr>
+  {{/each}}
+</tbody>
+</table>
+<button onclick="window.location.href=`/user/add`">ADD</button>
+</script>
+
+
+
